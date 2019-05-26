@@ -6,3 +6,4 @@ app = Flask(__name__)
 def manejador():
     if request.method == "POST":
         print(request.get_json())
+    return "hi"
