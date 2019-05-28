@@ -25,7 +25,7 @@ def manejador():
             query = ""
             query += palabras[0] + "("
             if len(palabras[1:]) > 1:
-                for palabra in palabras[1:]
+                for palabra in palabras[1:]:
                     query += palabra + ","
                 query = query[:-1] + ")" 
                 for solution in p.query(query):
