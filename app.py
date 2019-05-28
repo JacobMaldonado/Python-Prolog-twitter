@@ -27,11 +27,12 @@ def manejador():
             if len(palabras[1:]) > 1:
                 for palabra in palabras[1:]:
                     query += palabra + ","
-                query = query[:-1] + ")" 
+                query += query[:-1] + ")" 
                 for solution in p.query(query):
-                    for var in solution
+                    for var in solution:
                         respuesta += " var: " + var
                     respuesta +="\n"
-            #respuesta = "No entendi tu pregunta, trata escribiendo \"cursos\" y una categoria"
+            else: 
+                respuesta = "No entendi tu pregunta, trata escribiendo \"cursos\" y una categoria"
         return jsonify({"fulfillmentText": respuesta});
     return "hi"
