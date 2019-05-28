@@ -26,3 +26,11 @@ curso(primeros_pasos_android, codigo_facilito, codigo_facilito, movil).
 curso(curso_gratuito_de_flask, ismael_garcia, codigo_facilito, desarrollo_web).
 curso(curso_gratuito_de_arduino, fernanda_ochoa, codigo_facilito, hardware).
 curso(introduccion_al_uso_de_la_terminal, enrique_hernandez, codigo_facilito, programacion).
+
+profesorActivo(Profesor) :- 
+    curso(_,Profesor,_,_),
+    instructor(Profesor).
+
+categoriaDisponible(Categoria) :-
+    categoria(Categoria),
+    curso(_,_,_,Categoria).
