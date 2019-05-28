@@ -24,7 +24,7 @@ def manejador():
             p.consult("cursos.pl")
             query = ""
             query += palabras[0] + "("
-            if len(palabras[1:]) > 1:
+            if len(palabras[1:]) >= 1:
                 for palabra in palabras[1:]:
                     query += palabra + ","
                 query += query[:-1] + ")" 
