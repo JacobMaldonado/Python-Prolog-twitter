@@ -82,23 +82,23 @@ Veremos la siguiente ventana, en la que le pondremos un nombre y le daremos clic
 ![alt text](./recursos/img05.png)
   
 Posteriormente escribiremos la frase "frase" y la seleccionaremos con el cursor, deberia salir una ventana con entidades que empiezan con "@sys", en la barra de arriba escribimos any y la seleccionamos, de la siguiente manera:  
-![alt text](./recursos/img06.png)
+![alt text](./recursos/img06.PNG)
   
 Realizado el paso anterior, procedemos a bajar y cuando encontremos la parte de **Responses** le damos clic en "add response".  
-![alt text](./recursos/img07.png)
+![alt text](./recursos/img07.PNG)
   
 Agregaremos un mensaje que diga "Error en el webhook", este mensaje se ejecuta en caso de que nuestro servicio web no responda dentro de 5 segundos o haga una respuesta incorrecta.  
-![alt text](./recursos/img08.png)
+![alt text](./recursos/img08.PNG)
 
 Para terminar nuestra intención, tenemos que activar fulfillment en la parte inferior, de la siguiente manera.  
-![alt text](./recursos/img09.png)
+![alt text](./recursos/img09.PNG)
 
 Le damos click en "SAVE" en la parte superior derecha para guardar.  
 Ahora en el panel de la izquierda le damos click en "Fulfillment".  
-![alt text](./recursos/img10.png)
+![alt text](./recursos/img10.PNG)
 
 Activamos el apartado "Webhook" y en **URL** ponemos el segundo link de heroku, algo como "https://nombre-api-heroku.herokuapp.com/webhook/twitter", notese que al final tenemos la ruta "webhook/twitter" que es donde le mencionamos a nuestro servicio web que aceptara las peticiones.  
-![alt text](./recursos/img11.png)
+![alt text](./recursos/img11.PNG)
 
 Damos clic en "SAVE" y estaria lista la parte de dialogflow.
 
@@ -107,35 +107,35 @@ Damos clic en "SAVE" y estaria lista la parte de dialogflow.
 Por ultimo solo hay que agregar twitter a nuestro proyecto, en este caso necesitamos una cuenta de twitter y requerir acceso a [Twitter developers](https://developer.twitter.com/en/apply-for-access), este proceso preguntara un poco las intenciones de el uso de twitter, hay que extendernos todo lo posible en las explicaciónes que pidan para tener mayor posibilidad de obtener acceso.
 
 Una vez que tengamos acceso, vamos al apartado **apps**.  
-![alt text](./recursos/img12.png)
+![alt text](./recursos/img12.PNG)
 
 Damos clic en el boton "Create an app".  
-![alt text](./recursos/img13.png)  
+![alt text](./recursos/img13.PNG)  
 
 Llenamos los campos de forma descriptiva a lo que hara la app, en la pagina web no importa realmente el dominio mientras sea como prueba.  
-![alt text](./recursos/img14.png)
+![alt text](./recursos/img14.PNG)
 
 Nos aparecera una ventana con 3 pestañas, "app details", "keys and tokens", "Permissions", daremos clic en **Permissions** y luego en "edit".  
-![alt text](./recursos/img15.png)
+![alt text](./recursos/img15.PNG)
 
 Hay que seleccionar la opcion "Read, Write and Direct Messages" y luego dar clic en "SAVE".  
-![alt text](./recursos/img16.png)
+![alt text](./recursos/img16.PNG)
 
 Una vez hecho eso, vamos a "keys and tokens" y en **Access token & access token secret** damos click en "Create".  
-![alt text](./recursos/img17.png)
+![alt text](./recursos/img17.PNG)
 
 Mantenemos esa pestaña abierta, ahora vamos a crear un Entorno de desarrollo, para esto buscamos en el menu superior en la parte derecha "dev environments".  
-![alt text](./recursos/img18.png)
+![alt text](./recursos/img18.PNG)
 
 Veremos la siguiente ventana que contiene 3 entornos de desarrollo, en este caso ocupamos el de **account activity api** el cual nos permite saber cuando nos hacen un tweet, nos envian un mensaje directo, etc.
 Para esto damos clic en "Set up dev environment".  
-![alt text](./recursos/img19.png)
+![alt text](./recursos/img19.PNG)
 
 Le asignamos un nombre y seleccionamos la app en la que lo ocuparemos.
-![alt text](./recursos/img20.png)
+![alt text](./recursos/img20.PNG)
 
 Solo faltaria juntar esta parte con dialogflow, para esto hay que ir a la parte de "integrations" en Dialogflow y dar clic sobre Twitter.
-![alt text](./recursos/img21.png)
+![alt text](./recursos/img21.PNG)
 
 Ahora activamos la casilla superior derecha y llenamos cada campo:
 
@@ -146,7 +146,7 @@ Ahora activamos la casilla superior derecha y llenamos cada campo:
 - **Access Token Secret**: la llave correspondiente de la app.
 - **Dev environment label**: el nombre que le pusimos al "dev environment"
   
-![alt text](./recursos/img22.png)
+![alt text](./recursos/img22.PNG)
 
 Una vez todo puesto, le damos start y seria todo.
 
